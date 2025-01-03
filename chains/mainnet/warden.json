@@ -1,5 +1,5 @@
 {
-    "chain_name": "Warden protocol",
+    "chain_name": "Warden protocol (chiado)",
     "api": [
         {"provider": "Polkachu", "address": "https://neutron-api.polkachu.com"},
         {"provider": "NodeStake", "address": "https://api.neutron.nodestake.top"},
