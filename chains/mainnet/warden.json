@@ -6,13 +6,13 @@
   "min_tx_fee": 200,
   "sdk_version": "v0.50.9-evmos-warden",
   "addr_prefix": "warden",
-  "logo": "/logos/warden.png",
+  "logo": "https://raw.githubusercontent.com/opsmanager1/BIT_explorer/blob/master/public/logos/warden.png",
   "assets": [
     {
       "base": "award",
       "symbol": "WARD",
       "exponent": 18,
-      "logo": "/logos/warden.png"
+      "logo": "https://raw.githubusercontent.com/opsmanager1/BIT_explorer/blob/master/public/logos/warden.png"
     }
   ]
 }
