@@ -6,13 +6,13 @@
   "min_tx_fee": 200,
   "sdk_version": "v0.50.9-evmos-warden",
   "addr_prefix": "warden",
-  "logo": "https://raw.githubusercontent.com/opsmanager1/BIT_explorer/public/logos/warden.png",
+  "logo": "https://pbs.twimg.com/profile_images/1827100976152555520/N-CVNgTL_400x400.jpg",
   "assets": [
     {
       "base": "award",
       "symbol": "WARD",
       "exponent": 18,
-      "logo": "https://raw.githubusercontent.com/opsmanager1/BIT_explorer/public/logos/warden.png"
+      "logo": "https://pbs.twimg.com/profile_images/1827100976152555520/N-CVNgTL_400x400.jpg"
     }
   ]
 }
