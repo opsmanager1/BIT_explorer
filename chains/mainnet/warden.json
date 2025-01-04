@@ -22,9 +22,9 @@
         "symbol": "NTRN",
         "exponent": "6",
         "coingecko_id": "neutron",
-        "logo": "/logos/warden.svg"
+        "logo": "public/logos/warden.svg"
     }],
     "addr_prefix": "neutron",
     "theme_color": "#161723",
-    "logo": "/logos/warden.svg"
+    "logo": "public/logos/warden.png"
 }
