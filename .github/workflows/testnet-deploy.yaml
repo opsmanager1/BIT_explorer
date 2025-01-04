@@ -1,27 +1,20 @@
-
-name: Testnet Deploy
+name: Config Checker
 
 on:
-  push:
-    branches: [ testnet ]
+  # push:
+  #   branches: [ master ]
   pull_request:
-    branches: [ testnet ]
+   # branches: [ master ]
+   paths:
+      - 'chains/mainnet/**'
+      - 'chains/testnet/**'
 
 jobs:
   deploy:
-    name: Ping deploy
-    runs-on: testnet 
+    name: Check Blockchain Config
+    runs-on: ubuntu-latest
     steps:
-    - name: print
-      run: echo ${GITHUB_REF#refs/heads/}
     - name: Git Checkout Latest
-      uses: actions/checkout@v2
-      
-    - name: Install
-      run: yarn install
-
-    - name: Build
-      run: yarn run vue-cli-service build
-
-    - name: Deploy
-      run: cp -rf ./dist/* /var/www/html/
+      uses: actions/checkout@v3
+    - name: Check Chain Configs
+      uses: ping-pub/ping-dashboard-config-checker@v1.0
