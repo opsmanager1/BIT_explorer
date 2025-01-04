@@ -26,5 +26,5 @@
     }],
     "addr_prefix": "neutron",
     "theme_color": "#161723",
-    "logo": "public/logos/warden.png"
+    "logo": "public/logos/warden.svg"
 }
