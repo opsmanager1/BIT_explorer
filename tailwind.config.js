@@ -1,6 +1,5 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
+  darkMode: ['class'], // Темный режим на основе класса
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -28,15 +27,20 @@ module.exports = {
           ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
           primary: '#666cff',
           'base-100': '#2a334c',
-          'base-200': '#252d37'
+          'base-200': '#252d37',
         },
       },
     ],
   },
 };
 
-// Установка светлой темы для всех устройств
-if (typeof document !== 'undefined') {
-  document.documentElement.setAttribute('data-theme', 'light');
+// Установка светлой темы по умолчанию
+if (typeof window !== 'undefined') {
+  // Проверяем, установлен ли атрибут темы
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  
+  // Если тема еще не установлена, задаем "light"
+  if (!currentTheme) {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
 }
-
