@@ -1,5 +1,5 @@
 module.exports = {
-  darkMode: ['class'], // Темный режим на основе класса
+  lightMode: ['class'], // Темный режим на основе класса
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
