@@ -33,14 +33,3 @@ module.exports = {
     ],
   },
 };
-
-// Установка светлой темы по умолчанию
-if (typeof window !== 'undefined') {
-  // Проверяем, установлен ли атрибут темы
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  
-  // Если тема еще не установлена, задаем "light"
-  if (!currentTheme) {
-    document.documentElement.setAttribute('data-theme', 'light');
-  }
-}
