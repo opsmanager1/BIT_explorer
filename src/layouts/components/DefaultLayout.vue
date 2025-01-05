@@ -308,8 +308,8 @@ dayjs()
 
         <!-- <NavSearchBar />-->
         <NavBarI18n class="hidden md:!inline-block" />
-        <NavbarThemeSwitcher class="!inline-block" />
-        <NavbarSearch class="!inline-block" />
+      <!--  <NavbarThemeSwitcher class="!inline-block" /> -->
+        <NavbarSearch class="!inline-block" /> 
         <NavBarWallet />
       </div>
 
