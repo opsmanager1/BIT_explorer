@@ -41,7 +41,7 @@ const chainStore = useBlockchain()
   <div class="">
     <div class="flex md:!flex-row flex-col items-center justify-center mb-6 mt-14 gap-2">
       <div class="w-16 rounded-full">
-        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" 
+        <svg version="1.0" xmlns="https://raw.githubusercontent.com/opsmanager1/BITNODES/560e4353209e809e5495c0fec25061a804c38e03/logo/logo.svg" 
           viewBox="0 0 150.000000 132.000000"
           preserveAspectRatio="xMidYMid meet">
           <g transform="translate(0.000000,132.000000) scale(0.100000,-0.100000)"
