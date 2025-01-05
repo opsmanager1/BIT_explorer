@@ -11,7 +11,7 @@
       By&nbsp;
       <a
         class="link link-primary no-underline"
-        href="https://ping.pub"
+        href="https://www.bitnodes.xyz/"
         target="_blank"
         rel="noopener noreferrer"
         >BITNODES</a
