@@ -1,5 +1,5 @@
 {
-  "chain_name": "warden",
+  "chain_name": "warden(chiado)",
   "api": ["https://warden-api.bitnodes.xyz/"],
   "rpc": ["https://warden-rpc.bitnodes.xyz/"],
   "coin_type": 118,
