@@ -34,3 +34,9 @@ module.exports = {
     ],
   },
 };
+
+// Установка светлой темы для всех устройств
+if (typeof document !== 'undefined') {
+  document.documentElement.setAttribute('data-theme', 'light');
+}
+
