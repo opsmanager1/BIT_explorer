@@ -34,6 +34,7 @@ export default defineConfig({
       exclude: ['**/*.ts'], // only load .vue as modules
     }),
     Layouts({
+      skin: 'semi-dark',
       layoutsDirs: './src/layouts/',
     }),
     AutoImport({
