@@ -9,16 +9,12 @@ const themeMap: Record<string, string> = {
     dark: 'mdi-weather-night',
 };
 const baseStore = useBaseStore();
-const theme = computed(() => {
-    return baseStore.theme;
-});
+const theme = computed(() => baseStore.theme);
 
+// Функция для изменения темы
 const changeMode = (val?: 'dark' | 'light') => {
-    let value: 'dark' | 'light' = 'dark';
-    const currentValue: 'dark' | 'light' = val || theme.value;
-    if (currentValue === 'dark') {
-        value = 'light';
-    }
+    let value: 'dark' | 'light' = val || theme.value;
+
     if (value === 'light') {
         document.documentElement.classList.add('light');
         document.documentElement.classList.remove('dark');
@@ -27,12 +23,21 @@ const changeMode = (val?: 'dark' | 'light') => {
         document.documentElement.classList.remove('light');
     }
     document.documentElement.setAttribute('data-theme', value);
-    window.localStorage.setItem('theme', value);
+    window.localStorage.setItem('theme', value); // Сохраняем тему в localStorage
     baseStore.theme = value;
 };
 
 onMounted(() => {
-    changeMode(theme.value === 'light' ? 'dark' : 'light');
+    // Проверяем, есть ли тема в localStorage
+    const storedTheme = window.localStorage.getItem('theme') as 'dark' | 'light' | null;
+
+    if (storedTheme) {
+        // Если тема сохранена в localStorage, применяем её
+        changeMode(storedTheme);
+    } else {
+        // Если в localStorage нет сохранённой темы, устанавливаем светлую по умолчанию
+        changeMode('light');
+    }
 });
 </script>
 
@@ -42,7 +47,8 @@ onMounted(() => {
             class="btn btn-ghost btn-circle btn-sm mx-1"
             @click="changeMode()"
         >
-            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500 dark:text-gray-400" />
+            <Icon :icon="themeMap[theme]" class="text-2xl text-gray-500 dark:text-gray-400" />
         </button>
     </div>
 </template>
+
