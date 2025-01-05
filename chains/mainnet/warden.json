@@ -1,7 +1,7 @@
 {
   "chain_name": "warden(chiado)",
-  "api": ["https://warden-testnet-api.itrocket.net"],
-  "rpc": ["https://warden-testnet-rpc.itrocket.net"],
+  "api": ["https://warden-api.bitnodes.xyz/"],
+  "rpc": ["https://warden-rpc.bitnodes.xyz/"],
   "coin_type": 118,
   "min_tx_fee": 200,
   "sdk_version": "v0.50.9-evmos-warden",
