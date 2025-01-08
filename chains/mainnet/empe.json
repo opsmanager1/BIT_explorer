@@ -2,7 +2,6 @@
     "chain_name": "empe",
     "api": [
         {"provider": "EMPE", "address": "https://lcd-testnet.empe.io"},
-        {"provider": "CryptoNodeID", "address": "https://empeiria-testnet-api.cryptonode.id"}
     ],
     "rpc": [
         {"provider": "EMPE", "address": "https://rpc-testnet.empe.io"},
