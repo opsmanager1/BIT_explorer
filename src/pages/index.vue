@@ -99,6 +99,6 @@ const chainStore = useBlockchain()
 
 <style scoped>
  .logo path{
-  fill: #171d30;
+  fill: #000000;
 }
 </style>@/components/ad/ad
