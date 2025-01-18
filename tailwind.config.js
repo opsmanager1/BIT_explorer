@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       {
-        dark: {
+        forest: {
           ...require('daisyui/src/theming/themes')['[data-theme=forest]'],
         },
       },
