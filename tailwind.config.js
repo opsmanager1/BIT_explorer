@@ -10,7 +10,7 @@ module.exports = {
         info: '#00b2ff',
         main: 'var(--text-main)',
         secondary: 'var(--text-secondary)',
-        active: 'var(--bg-active)',
+        active: '#000000',
       }
     },
   },
