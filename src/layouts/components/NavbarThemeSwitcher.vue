@@ -5,23 +5,23 @@ import { useBaseStore } from '@/stores';
 const themeMap: Record<string, string> = {
     system: 'mdi-laptop',
     light: 'mdi-weather-sunny',
-    dark: 'mdi-weather-night',
+    forest: 'mdi-weather-night',
 };
 const baseStore = useBaseStore();
 const theme = computed(() => {
     return baseStore.theme;
 });
-const changeMode = (val?: 'dark' | 'light') => {
-    let value: 'dark' | 'light' = 'dark';
-    const currentValue: 'dark' | 'light' = val || theme.value;
-    if (currentValue === 'dark') {
+const changeMode = (val?: 'forest' | 'light') => {
+    let value: 'forest' | 'light' = 'forest';
+    const currentValue: 'forest' | 'light' = val || theme.value;
+    if (currentValue === 'forest') {
         value = 'light';
     }
     if (value === 'light') {
         document.documentElement.classList.add('light');
-        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.remove('forest');
     } else {
-        document.documentElement.classList.add('dark');
+        document.documentElement.classList.add('forest');
         document.documentElement.classList.remove('light');
     }
     document.documentElement.setAttribute('data-theme', value);
@@ -29,7 +29,7 @@ const changeMode = (val?: 'dark' | 'light') => {
     baseStore.theme = value;
 };
 onMounted(() => {
-    changeMode(theme.value === 'light' ? 'dark' : 'light');
+    changeMode(theme.value === 'light' ? 'forest' : 'light');
 });
 </script>
 
@@ -39,7 +39,7 @@ onMounted(() => {
             class="btn btn-ghost btn-circle btn-sm mx-1"
             @click="changeMode()"
         >
-            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500 dark:text-gray-400" />
+            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500 forest:text-gray-400" />
         </button>
     </div>
 </template>
