@@ -15,7 +15,7 @@ module.exports = {
         info: '#00b2ff',
         main: 'var(--text-main)',
         secondary: 'var(--text-secondary)',
-        active: '#000000',
+        active: 'var(--bg-active)',
       }
     },
   },
