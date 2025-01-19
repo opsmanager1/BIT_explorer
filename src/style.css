@@ -20,18 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --text-main: #333;
-  --text-secondary: #4b525d;
-  --bg-active: #000000;
-}
-
-html.dark,
-html[data-theme='dark'] {
-  --text-main: #f7f7f7;
-  --text-secondary: #6f6e84;
-  --bg-active: #000000;
-}
 
 .table th:first-child {
   position: relative;
