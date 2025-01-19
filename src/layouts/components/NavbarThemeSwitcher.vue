@@ -2,21 +2,24 @@
 import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
 import { useBaseStore } from '@/stores';
+
 const themeMap: Record<string, string> = {
-    system: 'mdi-laptop',
     light: 'mdi-weather-sunny',
     retro: 'mdi-weather-night',
 };
+
 const baseStore = useBaseStore();
-const theme = computed(() => {
-    return baseStore.theme;
-});
+
+const theme = computed(() => baseStore.theme);
+
 const changeMode = (val?: 'retro' | 'light') => {
     let value: 'retro' | 'light' = 'retro';
     const currentValue: 'retro' | 'light' = val || theme.value;
+
     if (currentValue === 'retro') {
         value = 'light';
     }
+
     if (value === 'light') {
         document.documentElement.classList.add('light');
         document.documentElement.classList.remove('retro');
@@ -24,23 +27,31 @@ const changeMode = (val?: 'retro' | 'light') => {
         document.documentElement.classList.add('retro');
         document.documentElement.classList.remove('light');
     }
+
     document.documentElement.setAttribute('data-theme', value);
     window.localStorage.setItem('theme', value);
     baseStore.theme = value;
 };
+
 onMounted(() => {
-    changeMode(theme.value === 'light' ? 'retro' : 'light');
+    // Инициализируем тему при загрузке
+    const savedTheme = window.localStorage.getItem('theme') as 'retro' | 'light';
+    if (savedTheme && (savedTheme === 'retro' || savedTheme === 'light')) {
+        changeMode(savedTheme);
+    } else {
+        // Устанавливаем начальную тему (например, 'light')
+        changeMode('light');
+    }
 });
 </script>
 
 <template>
-    <div class="tooltip tooltip-bottom delay-1000">
+    <div class="tooltip tooltip-bottom" data-tip="Switch Theme">
         <button
             class="btn btn-ghost btn-circle btn-sm mx-1"
             @click="changeMode()"
         >
-            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500 dark:text-gray-400" />
+            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500" />
         </button>
     </div>
 </template>
-
