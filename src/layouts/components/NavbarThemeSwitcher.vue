@@ -10,10 +10,20 @@ const themeMap: Record<'light' | 'retro', string> = {
 };
 
 // Хранилище
-const baseStore = useBaseStore();
+
+export const useBaseStore = defineStore('base', {
+    state: () => ({
+        theme: 'light' as 'light' | 'dark' | 'retro', // Добавляем 'retro'
+    }),
+    actions: {
+        setTheme(newTheme: 'light' | 'dark' | 'retro') {
+            this.theme = newTheme;
+        },
+    },
+});
 
 // Получаем текущую тему из хранилища
-const theme = computed(() => baseStore.theme as 'light' | 'retro');
+const theme = computed(() => baseStore.theme as 'light' | 'dark' | 'retro');
 
 // Функция переключения темы
 const changeMode = (val?: 'retro' | 'light') => {
