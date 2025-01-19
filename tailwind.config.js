@@ -21,7 +21,20 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: [ "ligth", "dark", "retro", ]
-     },
+  themes: [
+    {
+      light: {
+        ...require('daisyui/src/theming/themes')['[data-theme=light]'],
+        primary: '#666cff',
+      },
+    },
+    {
+      retro: {
+        ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
+        primary: '#666cff',
+      },
+    },
+  ],
+},
 };
 
