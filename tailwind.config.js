@@ -28,12 +28,7 @@ module.exports = {
         },
       },
       {
-        dark: {
-          ...require('daisyui/src/theming/themes')['[data-theme=luxury]'],
-          primary: '#666cff',
-          'base-100': '#2a334c',
-          'primary-content': '#000000'
-        },
+        dark
       },
     ],
   },
