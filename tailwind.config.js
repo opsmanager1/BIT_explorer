@@ -19,22 +19,22 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
-  daisyui: {
-  themes: [
-    {
-      light: {
-        ...require('daisyui/src/theming/themes')['[data-theme=light]'],
-        primary: '#666cff',
-      },
+   plugins: [require('daisyui')],
+    daisyui: {
+        themes: [
+            {
+                retro: {
+                    // Определите цвета для темы "retro"
+                    primary: '#ffcc00',
+                    secondary: '#cc33ff',
+                    accent: '#33ccff',
+                    neutral: '#333333',
+                    'base-100': '#ffffff',
+                },
+            },
+            'light', // Включаем стандартные темы
+            'dark',
+        ],
     },
-    {
-      retro: {
-        ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
-        primary: '#666cff',
-      },
-    },
-  ],
-},
 };
 
