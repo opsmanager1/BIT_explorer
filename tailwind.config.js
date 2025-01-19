@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         dark: {
-          ...require('daisyui/src/theming/themes')['[data-theme=retro]'],
+          ...require('daisyui/src/theming/themes')['[data-theme=luxury]'],
           primary: '#666cff',
           'base-100': '#2a334c',
           'base-200': '#000000'
