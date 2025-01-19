@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineStore } from 'pinia';
 import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
 import { useBaseStore } from '@/stores';
