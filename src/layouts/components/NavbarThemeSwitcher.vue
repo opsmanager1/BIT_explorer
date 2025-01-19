@@ -4,7 +4,7 @@ import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
 import { useBaseStore } from '@/stores';
 
-const themeMap: Record<string, string> = {
+const themeMap: Record<'light' | 'retro', string> = {
     light: 'mdi-weather-sunny',
     retro: 'mdi-weather-night',
 };
