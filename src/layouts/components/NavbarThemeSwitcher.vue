@@ -2,7 +2,7 @@
 import { defineStore } from 'pinia';
 import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
-import { useBaseStore } from '@/stores';
+import { useBaseStore } from '@/stores/baseStore';
 
 // Карта иконок для тем
 const themeMap: Record<'light' | 'retro', string> = {
