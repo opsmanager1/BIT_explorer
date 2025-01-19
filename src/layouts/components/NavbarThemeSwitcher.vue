@@ -8,9 +8,9 @@ const themeMap: Record<string, string> = {
     retro: 'mdi-weather-night',
 };
 
-const baseStore = useBaseStore();
+const theme = computed(() => baseStore.theme as 'light' | 'retro');
 
-const theme = computed(() => baseStore.theme);
+const baseStore = useBaseStore();
 
 const changeMode = (val?: 'retro' | 'light') => {
     let value: 'retro' | 'light' = 'retro';
