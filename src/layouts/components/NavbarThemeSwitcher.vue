@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { defineStore } from 'pinia';
 import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
 import { useBaseStore } from '@/stores';
@@ -10,7 +11,16 @@ const themeMap: Record<string, string> = {
 
 const theme = computed(() => baseStore.theme as 'light' | 'retro');
 
-const baseStore = useBaseStore();
+export const useBaseStore = defineStore('base', {
+    state: () => ({
+        theme: 'light' as 'light' | 'retro', // Ограничиваем возможные значения
+    }),
+    actions: {
+        setTheme(newTheme: 'light' | 'retro') {
+            this.theme = newTheme;
+        },
+    },
+});
 
 const changeMode = (val?: 'retro' | 'light') => {
     let value: 'retro' | 'light' = 'retro';
