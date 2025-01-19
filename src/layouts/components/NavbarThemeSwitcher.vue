@@ -1,64 +1,48 @@
 <script setup lang="ts">
-import { defineStore } from 'pinia';
 import { Icon } from '@iconify/vue';
 import { onMounted, computed } from 'vue';
-import { useBaseStore } from '@/stores/baseStore';
+import { useBaseStore } from '@/stores';
 
-// Карта иконок для тем
-const themeMap: Record<'light' | 'retro', string> = {
+const themeMap: Record<string, string> = {
+    system: 'mdi-laptop',
     light: 'mdi-weather-sunny',
-    retro: 'mdi-weather-night',
+    dark: 'mdi-weather-night',
 };
-
-// Хранилище
-
 const baseStore = useBaseStore();
+const theme = computed(() => {
+    return baseStore.theme;
+});
 
-// Получаем текущую тему из хранилища
-const theme = computed(() => baseStore.theme as 'light' | 'dark' | 'retro');
-
-// Функция переключения темы
-const changeMode = (val?: 'retro' | 'light') => {
-    let value: 'retro' | 'light' = 'retro';
-    const currentValue: 'retro' | 'light' = val || theme.value;
-
-    // Логика переключения
-    if (currentValue === 'retro') {
+const changeMode = (val?: 'dark' | 'light') => {
+    let value: 'dark' | 'light' = 'dark';
+    const currentValue: 'dark' | 'light' = val || theme.value;
+    if (currentValue === 'dark') {
         value = 'light';
     }
-
     if (value === 'light') {
         document.documentElement.classList.add('light');
-        document.documentElement.classList.remove('retro');
+        document.documentElement.classList.remove('dark');
     } else {
-        document.documentElement.classList.add('retro');
+        document.documentElement.classList.add('dark');
         document.documentElement.classList.remove('light');
     }
-
-    // Устанавливаем тему в localStorage и обновляем хранилище
     document.documentElement.setAttribute('data-theme', value);
     window.localStorage.setItem('theme', value);
     baseStore.theme = value;
 };
 
-// При загрузке инициализируем тему
 onMounted(() => {
-    const savedTheme = window.localStorage.getItem('theme') as 'retro' | 'light';
-    if (savedTheme && (savedTheme === 'retro' || savedTheme === 'light')) {
-        changeMode(savedTheme);
-    } else {
-        changeMode('light'); // Устанавливаем тему по умолчанию
-    }
+    changeMode(theme.value === 'light' ? 'dark' : 'light');
 });
 </script>
 
 <template>
-    <div class="tooltip tooltip-bottom" data-tip="Switch Theme">
+    <div class="tooltip tooltip-bottom delay-1000">
         <button
             class="btn btn-ghost btn-circle btn-sm mx-1"
             @click="changeMode()"
         >
-            <Icon :icon="themeMap[theme]" class="text-2xl text-gray-500" />
+            <Icon :icon="themeMap?.[theme]" class="text-2xl text-gray-500 dark:text-gray-400" />
         </button>
     </div>
 </template>
