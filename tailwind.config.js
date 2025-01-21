@@ -1,12 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: [
-  './index.html',
-  './src/**/*.{vue,js,ts,jsx,tsx}',
-  './components/**/*.{vue,js,ts,jsx,tsx}', // Пример для папки "components"
-  './pages/**/*.{vue,js,ts,jsx,tsx}', // Пример для папки "pages"
-],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -19,21 +14,23 @@ module.exports = {
       }
     },
   },
-   plugins: [require('daisyui')],
-    daisyui: {
-        themes: [
-            {
-                retro: {
-                    // Определите цвета для темы "retro"
-                    primary: '#ffcc00',
-                    secondary: '#cc33ff',
-                    accent: '#33ccff',
-                    neutral: '#333333',
-                    'base-100': '#ffffff',
-                },
-            },
-            'light', // Включаем стандартные темы
-        ],
-    },
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require('daisyui/src/theming/themes')['[data-theme=light]'],
+          primary: '#666cff',
+        },
+      },
+      {
+        dark: {
+          ...require('daisyui/src/theming/themes')['[data-theme=dark]'],
+          primary: '#666cff',
+          'base-100': '#2a334c',
+          'base-200': '#252d37'
+        },
+      },
+    ],
+  },
 };
-
