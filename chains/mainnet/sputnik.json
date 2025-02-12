@@ -1,7 +1,7 @@
 {
     "chain_name": "Sputnik testnet",
-    "api": ["http://api.dentrite.axone.xyz"],
-    "rpc": ["http://api.dentrite.axone.xyz:443/rpc"],
+    "api": ["https://sputnik-api.bitnodes.xyz"],
+    "rpc": ["https://sputnik-rpc.bitnodes.xyz"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.9",
