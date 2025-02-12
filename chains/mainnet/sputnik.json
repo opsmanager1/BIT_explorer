@@ -8,13 +8,13 @@
     "coin_type": "118",
     "min_tx_fee": "800",
     "addr_prefix": "sputnik",
-    "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FSputnikNetwork&psig=AOvVaw0KoDe0AbaoYf9wYBmyfaqs&ust=1739472637111000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiR1NbmvosDFQAAAAAdAAAAABAE",
+    "logo": "https://airdrops.one/wp-content/uploads/2024/03/sputnik-airdrop-logo.jpeg",
     "assets": [
       {
         "base": "usignal",
         "symbol": "SIGNAL",
         "exponent": "6",
-        "logo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FSputnikNetwork&psig=AOvVaw0KoDe0AbaoYf9wYBmyfaqs&ust=1739472637111000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNiR1NbmvosDFQAAAAAdAAAAABAE"
+        "logo": "https://airdrops.one/wp-content/uploads/2024/03/sputnik-airdrop-logo.jpeg"
       }
     ]
     }
