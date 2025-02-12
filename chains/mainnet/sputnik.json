@@ -1,5 +1,5 @@
 {
-    "chain_name": "Sputnik testnet",
+    "chain_name": "Sputnik4.4",
     "api": ["https://sputnik-api.bitnodes.xyz"],
     "rpc": ["https://sputnik-rpc.bitnodes.xyz"],
     "coingecko": "",
