@@ -6,7 +6,7 @@
     "snapshot_provider": "",
     "sdk_version": "0.50.9",
     "coin_type": "118",
-    "min_tx_fee": "800",
+    "min_tx_fee": "200",
     "addr_prefix": "sputnik",
     "logo": "https://airdrops.one/wp-content/uploads/2024/03/sputnik-airdrop-logo.jpeg",
     "assets": [
