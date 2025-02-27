@@ -1,6 +1,6 @@
 {
     "chain_name": "Axone testnet",
-    "api": ["https://api.dentrite.axone.xyz"],
+    "api": ["https://axone-api.bitnodes.xyz/"],
     "rpc": ["https://api.dentrite.axone.xyz:443/rpc"],
     "coingecko": "",
     "snapshot_provider": "",
