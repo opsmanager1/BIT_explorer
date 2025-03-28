@@ -7,6 +7,7 @@
 		"coinType": 118
 	},
 	"coinType": 118,
+	"logo": "https://avatars.githubusercontent.com/u/107769009?s=280&v=4",
 	"bech32Config": {
 		"bech32PrefixAccAddr": "air",
 		"bech32PrefixAccPub": "airpub",
