@@ -1,6 +1,6 @@
 {
+	"chain_name": "Airchains varanasi",
 	"chainId": "varanasi-1",
-	"chainName": "Airchains-Testnet",
 	"rpc": "https://airchains.rpc.t.stavr.tech",
 	"rest": "https://airchains.api.t.stavr.tech",
 	"bip44": {
