@@ -1,0 +1,56 @@
+{
+	"chainId": "varanasi-1",
+	"chainName": "Airchains-Testnet",
+	"rpc": "https://airchains.rpc.t.stavr.tech",
+	"rest": "https://airchains.api.t.stavr.tech",
+	"bip44": {
+		"coinType": 118
+	},
+	"coinType": 118,
+	"bech32Config": {
+		"bech32PrefixAccAddr": "air",
+		"bech32PrefixAccPub": "airpub",
+		"bech32PrefixValAddr": "airvaloper",
+		"bech32PrefixValPub": "airvaloperpub",
+		"bech32PrefixConsAddr": "airvalcons",
+		"bech32PrefixConsPub": "airvalconspub"
+	},
+	"currencies": [
+		{
+			"coinDenom": "amf",
+			"coinMinimalDenom": "uamf",
+			"coinDecimals": 6,
+			"coinGeckoId": "unknown"
+		}
+	],
+	"feeCurrencies": [
+		{
+			"coinDenom": "amf",
+			"coinMinimalDenom": "uamf",
+			"coinDecimals": 6,
+			"coinGeckoId": "unknown",
+			"gasPriceStep": {
+				"low": 0.01,
+				"average": 0.025,
+				"high": 0.03
+			}
+		}
+	],
+	"gasPriceStep": {
+		"low": 0.01,
+		"average": 0.025,
+		"high": 0.03
+	},
+	"stakeCurrency": {
+		"coinDenom": "amf",
+		"coinMinimalDenom": "uamf",
+		"coinDecimals": 6,
+		"coinGeckoId": "unknown"
+	},
+	"features": [
+		"ibc-transfer",
+		"ibc-go",
+		"eth-address-gen",
+		"eth-key-sign"
+	]
+}
