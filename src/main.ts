@@ -1,4 +1,5 @@
 // import 'ping-widget';
+import './theme-init.css'
 import App from '@/App.vue';
 import i18n from '@/plugins/i18n';
 import '@/style.css';
