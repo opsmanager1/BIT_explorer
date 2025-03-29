@@ -3,8 +3,8 @@ import misc404 from '@/assets/images/pages/404.png';
 </script>
 
 <template>
-    <div class="pt-10">
-        <div class="text-center">
+     <div class="pt-10 bg-base-100 min-h-screen">
+         <div class="text-center text-base-content">
             <div class="text-8xl font-semibold text-main">{{ $t('pages.title_all') }}</div>
             <div class="text-xl font-bold my-2">{{ $t('pages.tag_all') }}</div>
             <div class="text-base">
