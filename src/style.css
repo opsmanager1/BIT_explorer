@@ -8,6 +8,11 @@ html,body {
   height: 100%;
 }
 
+html {
+  visibility: visible;
+  transition: visibility 0s;
+}
+
 body {
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
