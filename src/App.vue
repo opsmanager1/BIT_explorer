@@ -1,19 +1,34 @@
 <script setup lang="ts">
-import { themeChange } from 'theme-change';
-import { onMounted, ref } from 'vue';
-import TxDialog from './components/TxDialog.vue';
+import { onMounted, ref } from 'vue'
+import { themeChange } from 'theme-change'
+import TxDialog from './components/TxDialog.vue'
 
-const isDark = ref(false);
+
+const theme = ref(localStorage.getItem('theme') || 
+               (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
 
 onMounted(() => {
-  themeChange(false);
-  isDark.value = window.matchMedia('(prefers-color-scheme: dark)').matches;
-});
+
+  document.documentElement.setAttribute('data-theme', theme.value)
+  themeChange(false) 
+})
 </script>
 
 <template>
-  <div :class="{ 'dark': isDark }">
+  <div :data-theme="theme">
     <RouterView />
     <TxDialog />
   </div>
 </template>
+
+<style>
+
+html.dark {
+  @apply bg-base-100;
+}
+
+html {
+  @apply bg-white;
+  transition: background-color 0.3s;
+}
+</style>
