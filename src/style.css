@@ -40,3 +40,27 @@ body {
   opacity: 0;
   transform: translateY(-calc(15%));
 }
+
+/* Темная тема */
+.dark {
+  --text-main: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --bg-active: #4CAF50;
+}
+
+/* SVG иконки в темном режиме */
+.dark .iconify {
+  filter: invert(1);
+}
+
+/* Кастомизация скроллбара */
+.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1E1E1E;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #666cff;
+  border-radius: 4px;
+}
