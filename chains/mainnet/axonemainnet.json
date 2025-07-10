@@ -1,1 +1,19 @@
-1
+{
+    "chain_name": "Axone Mainnet",
+    "api": ["https://api.axone.nodestake.org"],
+    "rpc": ["https://rpc.axone.nodestake.org"],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9",
+    "coin_type": "118",
+    "min_tx_fee": "800",
+    "addr_prefix": "axone",
+    "logo": "https://avatars.githubusercontent.com/u/162694043?s=280&v=4",
+    "assets": [
+      {
+        "base": "uaxone",
+        "symbol": "AXONE",
+        "exponent": "6",
+        "logo": "https://avatars.githubusercontent.com/u/162694043?s=280&v=4"
+      }
+    ]
