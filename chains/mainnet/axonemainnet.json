@@ -1,7 +1,7 @@
 {
     "chain_name": "Axone Mainnet",
-    "api": ["https://api.axone.nodestake.org"],
-    "rpc": ["https://rpc.axone.nodestake.org"],
+    "api": ["https://axone-api.bitnodes.xyz/"],
+    "rpc": ["https://axone-rpc.bitnodes.xyz/"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.9",
