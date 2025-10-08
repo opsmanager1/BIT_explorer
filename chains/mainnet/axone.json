@@ -1,7 +1,7 @@
 {
     "chain_name": "Axone testnet",
-    "api": ["https://api.dentrite.axone.xyz"],
-    "rpc": ["https://axone-test.api.cumulo.com.es"],
+    "api": ["https://axone-test.api.cumulo.com.es"],
+    "rpc": ["https://axone-test.rpc.cumulo.com.es"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.9",
